@@ -144,7 +144,7 @@ void reconnect() {
       // Once connected, publish an announcement...
       publish_all();
       // ... and resubscribe
-      client.subscribe("TH/consigne");
+      client.subscribe("TH/consigne/#");
       client.subscribe("DZ/out");
     } else {
       Serial.print("failed, rc=");
