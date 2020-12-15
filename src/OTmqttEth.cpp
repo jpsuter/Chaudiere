@@ -181,7 +181,7 @@ float getDHWTemperature() {
 }
 
 float getOutsideTemperature() {
-        unsigned long response = ot.sendRequest(ot.buildRequest(OpenThermMessageType::READ_DATA, OpenThermMessageID::Tdhw, 0));
+        unsigned long response = ot.sendRequest(ot.buildRequest(OpenThermMessageType::READ_DATA, OpenThermMessageID::Toutside, 0));
         return ot.isValidResponse(response) ? ot.getFloat(response) : 0;
 }
 
